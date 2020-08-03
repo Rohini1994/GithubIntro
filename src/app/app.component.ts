@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
+import {ProductService} from './services/product.service';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myLazyLoad';
+  users:String[];
+ 
+  // @Output() featureSelected = new EventEmitter<string>();
+
+  constructor( public productService:ProductService) { }
+
+  ngOnInit(): void {
+  }
+  getCustomer(){
+
+  }
+  getProduct(){
+    this.productService.getData().subscribe((data) => {
+      console.log(data);
+    })
+    
+  }
+  getOrder(){
+
+  }
+
 }

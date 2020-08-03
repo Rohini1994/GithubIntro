@@ -10,7 +10,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let issue of issues | paginate: { id: 'listing_pagination',
-              itemsPerPage: 10,
+              itemsPerPage: 5,
               currentPage: pageNumber,
               totalItems: totalRecords }">
                 <td>{{issue.title}}</td>

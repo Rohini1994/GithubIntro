@@ -13,15 +13,36 @@ export class ProductsComponent implements OnInit {
   constructor( public productService:ProductService) { }
 
   issues = [];
+  pageNumber=1;
+  totalRecords:String
 
   ngOnInit(): void {
     this.getIssues();
   }
 
   getIssues() {
+    // const url = "https://api.github.com/repos/hadley/dplyr/issues?per_page=10&"+this.pageNumber;
     this.productService.getIssuesData().subscribe((data) => {
-      this.issues = data;      
+      console.log(data);
+      // url
+      this.issues = data
+      this.totalRecords = data.length
+
+      // if (this.pageNumber > 0) {
+
+      //   this.issues = this.issues.concat(data);
+        
+      //  } else 
+      //  { this.issues = data; 
+      // }  
+      // this.pageNumber++;
+       
     });
   }
 
+  
+
+
 }
+
+

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {HttpClientModule} from '@angular/common/http';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
@@ -9,7 +11,9 @@ import { ProductsComponent } from './products.component';
   declarations: [ProductsComponent],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    NgxPaginationModule,
+    HttpClientModule
   ]
 })
 export class ProductsModule {

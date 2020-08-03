@@ -9,14 +9,22 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let issue of issues">
+              <tr *ngFor="let issue of issues | paginate: { id: 'listing_pagination',
+              itemsPerPage: 10,
+              currentPage: pageNumber,
+              totalItems: totalRecords }">
                 <td>{{issue.title}}</td>
                 <td>{{issue.user.id}}</td>
                 <td>{{issue.state}}</td>
                 <td>{{issue.created_at}}</td>
-              </tr></tbody>
+              </tr>
+
+            </tbody>
               
           </table>
+          <div>
+            <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="pageNumber=$event"></pagination-controls>
+          </div>
     
     
   </table>

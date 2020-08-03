@@ -8,7 +8,11 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  users:String[];
+//   users:String[]
+//  totalRecords:Number
+//  page:Number
+
+  // collection: any[] = someArrayOfThings; 
  
   // @Output() featureSelected = new EventEmitter<string>();
 
@@ -20,8 +24,9 @@ export class AppComponent {
 
   }
   getProduct(){
-    this.productService.getData().subscribe((data) => {
+    this.productService.getIssuesData().subscribe((data) => {
       console.log(data);
+      
     })
     
   }

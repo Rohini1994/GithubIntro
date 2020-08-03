@@ -16,7 +16,7 @@ export class ProductService {
   }
   
   getIssuesData():Observable<any>{
-    const url = "https://api.github.com/repos/hadley/dplyr/issues"
+     const url = "https://api.github.com/repos/hadley/dplyr/issues"
     return this.http.get<any>(url);
   }
   

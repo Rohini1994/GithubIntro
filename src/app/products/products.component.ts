@@ -28,14 +28,7 @@ export class ProductsComponent implements OnInit {
       this.issues = data
       this.totalRecords = data.length
 
-      // if (this.pageNumber > 0) {
-
-      //   this.issues = this.issues.concat(data);
-        
-      //  } else 
-      //  { this.issues = data; 
-      // }  
-      // this.pageNumber++;
+    
        
     });
   }

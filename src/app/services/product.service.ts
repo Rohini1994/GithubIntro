@@ -10,13 +10,13 @@ export class ProductService {
   constructor(private http:HttpClient) { }
 
 
-  getData():Observable<any>{
-    const url = "https://api.github.com/repos/hadley/dplyr/issues"
-    return this.http.get<any>(url);
-  }
+  // getData():Observable<any>{
+  //   const url = "https://api.github.com/repos/hadley/dplyr/issues"
+  //   return this.http.get<any>(url);
+  // }
   
   getIssuesData():Observable<any>{
-     const url = "https://api.github.com/repos/hadley/dplyr/issues"
+     const url =  "https://jsonplaceholder.typicode.com/posts"
     return this.http.get<any>(url);
   }
   

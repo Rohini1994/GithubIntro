@@ -22,6 +22,8 @@ export class CustomersComponent implements OnInit {
 
   
   onSubmit(form:NgForm) {
+    console.log('data is here');
+    
     this.userService.postUser(form.value).subscribe(
       res =>{
         this.showSucessMessage = true;
